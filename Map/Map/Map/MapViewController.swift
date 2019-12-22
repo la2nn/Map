@@ -7,30 +7,40 @@
 //
 
 import UIKit
-import MapKit
+import GoogleMaps
 
 class MapViewController: UIViewController {
     
-    private let mapView = MKMapView()
-    private let regionService = MKCoordinateRegionService()
+    private lazy var mapView: GMSMapView = {
+        let mapView = GMSMapView()
+        mapView.camera = GMSCameraPosition.camera(withLatitude: 25.761681,
+                                                  longitude: -80.191788,
+                                                  zoom: defaultZoomLevel)
+        return mapView
+    }()
     private let locationService = CLLocationManagerService()
-    
+    private let defaultZoomLevel: Float = 17.0
     private var navigationButton: UIButton?
     private lazy var layoutGuide = view.safeAreaLayoutGuide
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        mapView.showsCompass = false
+        locationService.delegate = self
+//        let marker = GMSMarker()
+//         marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
+//         marker.title = "Sydney"
+//         marker.snippet = "Australia"
+//         marker.map = mapView
+        
         setupMapViewLayout()
         setupNavigationView()
-        mapView.setRegion(regionService.getRegionWith(coordinate: regionService.defaultCenterCoordinate,
-                                                      span: nil), animated: false)
+
         locationService.requestWhenInUseAuthorization()
     }
 
 }
 
-// MARK: SetupConstraints
+// MARK: - SetupConstraints
 
 extension MapViewController {
     fileprivate func setupMapViewLayout() {
@@ -85,7 +95,7 @@ extension MapViewController {
    
 }
 
-// MARK: HandleNavigation
+// MARK: - HandleNavigation
 
 extension MapViewController {
     @objc private func handleNavigation() {
@@ -99,15 +109,28 @@ extension MapViewController {
         
         locationService.isEnabled.toggle()
         navigationButton?.setImage(getImageForNavigationButton(), for: .normal)
+        mapView.isMyLocationEnabled = locationService.isEnabled
         
         if locationService.isEnabled {
-            mapView.userTrackingMode = .follow
-            mapView.userActivity?.becomeCurrent()
-            mapView.showsUserLocation = true
+            locationService.startUpdatingLocation()
         } else {
-            mapView.userTrackingMode = .none
-            mapView.userActivity?.invalidate()
-            mapView.showsUserLocation = false
+            locationService.stopUpdatingLocation()
         }
+    }
+}
+
+// MARK: - CLLocationManagerDelegate
+
+extension MapViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let lastLocation = locations.last else { return }
+        let latitude = lastLocation.coordinate.latitude
+        let longitude = lastLocation.coordinate.longitude
+        
+        let camera = GMSCameraPosition.camera(withLatitude: latitude,
+                                              longitude: longitude,
+                                              zoom: mapView.camera.zoom)
+        
+        mapView.animate(to: camera)
     }
 }
