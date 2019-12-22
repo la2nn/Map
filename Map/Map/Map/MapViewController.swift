@@ -18,7 +18,7 @@ class MapViewController: UIViewController {
                                                   zoom: defaultZoomLevel)
         return mapView
     }()
-    private let locationService = CLLocationManagerService()
+    private let locationService = LocationService()
     private let defaultZoomLevel: Float = 17.0
     private var navigationButton: UIButton?
     private lazy var layoutGuide = view.safeAreaLayoutGuide

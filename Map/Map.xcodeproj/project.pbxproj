@@ -12,7 +12,7 @@
 		011BCEAD23AF853300DDD135 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011BCEAC23AF853300DDD135 /* MapViewController.swift */; };
 		011BCEB223AF853500DDD135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 011BCEB123AF853500DDD135 /* Assets.xcassets */; };
 		011BCEB523AF853500DDD135 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011BCEB323AF853500DDD135 /* LaunchScreen.storyboard */; };
-		011BCEC123AF8EE300DDD135 /* CLLocationManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011BCEC023AF8EE300DDD135 /* CLLocationManagerService.swift */; };
+		011BCEC123AF8EE300DDD135 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011BCEC023AF8EE300DDD135 /* LocationService.swift */; };
 		011BCEC423AFA7F500DDD135 /* AlertControllerLocationDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011BCEC323AFA7F500DDD135 /* AlertControllerLocationDenied.swift */; };
 		CCDAEFE944A5B6A8F957C964 /* Pods_Map.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D438B0516B069916AE719396 /* Pods_Map.framework */; };
 /* End PBXBuildFile section */
@@ -25,7 +25,7 @@
 		011BCEB123AF853500DDD135 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		011BCEB423AF853500DDD135 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		011BCEB623AF853500DDD135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		011BCEC023AF8EE300DDD135 /* CLLocationManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationManagerService.swift; sourceTree = "<group>"; };
+		011BCEC023AF8EE300DDD135 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		011BCEC323AFA7F500DDD135 /* AlertControllerLocationDenied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerLocationDenied.swift; sourceTree = "<group>"; };
 		2500606AED2C7A5F423B4E63 /* Pods-Map.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Map.release.xcconfig"; path = "Target Support Files/Pods-Map/Pods-Map.release.xcconfig"; sourceTree = "<group>"; };
 		52D39C8DC485ADFDD79A7358 /* Pods-Map.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Map.debug.xcconfig"; path = "Target Support Files/Pods-Map/Pods-Map.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 		011BCEBF23AF89DA00DDD135 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				011BCEC023AF8EE300DDD135 /* CLLocationManagerService.swift */,
+				011BCEC023AF8EE300DDD135 /* LocationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -233,7 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				011BCEAD23AF853300DDD135 /* MapViewController.swift in Sources */,
-				011BCEC123AF8EE300DDD135 /* CLLocationManagerService.swift in Sources */,
+				011BCEC123AF8EE300DDD135 /* LocationService.swift in Sources */,
 				011BCEC423AFA7F500DDD135 /* AlertControllerLocationDenied.swift in Sources */,
 				011BCEA923AF853300DDD135 /* AppDelegate.swift in Sources */,
 				011BCEAB23AF853300DDD135 /* SceneDelegate.swift in Sources */,

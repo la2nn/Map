@@ -1,5 +1,5 @@
 //
-//  CLLocationManagerService.swift
+//  LocationService.swift
 //  Map
 //
 //  Created by Николай Спиридонов on 22.12.2019.
@@ -9,7 +9,7 @@
 import MapKit
 import UIKit
 
-final class CLLocationManagerService: CLLocationManager, CLLocationManagerDelegate {
+final class LocationService: CLLocationManager, CLLocationManagerDelegate {
 
     var isEnabled = false {
         didSet {
