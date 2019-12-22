@@ -22,22 +22,24 @@ class MapViewController: UIViewController {
     private let defaultZoomLevel: Float = 17.0
     private var navigationButton: UIButton?
     private lazy var layoutGuide = view.safeAreaLayoutGuide
+    private let markerService: MarkerServiceProtocol? = MarkerService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationService.delegate = self
-//        let marker = GMSMarker()
-//         marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-//         marker.title = "Sydney"
-//         marker.snippet = "Australia"
-//         marker.map = mapView
-        
         setupMapViewLayout()
         setupNavigationView()
 
+        locationService.delegate = self
         locationService.requestWhenInUseAuthorization()
+        
+        // Пример как ставить на карту маркеры
+        markerService?.makeMarkerAt(map: mapView,
+                                    position: CLLocationCoordinate2D(latitude: 25.761681,
+                                                                     longitude: -80.191788),
+                                    title: nil,
+                                    subtitle: nil,
+                                    image: UIImage(named: "locationEnabled"))
     }
-
 }
 
 // MARK: - SetupConstraints

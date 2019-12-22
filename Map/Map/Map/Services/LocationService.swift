@@ -17,14 +17,9 @@ final class LocationService: CLLocationManager, CLLocationManagerDelegate {
         }
     }
 
-    var userLocation: CLLocationCoordinate2D? {
-        return self.location?.coordinate
-    }
-
     override init() {
         super.init()
         if CLLocationManager.locationServicesEnabled() {
-            self.delegate = self
             self.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         }
     }

@@ -14,6 +14,9 @@
 		011BCEB523AF853500DDD135 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011BCEB323AF853500DDD135 /* LaunchScreen.storyboard */; };
 		011BCEC123AF8EE300DDD135 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011BCEC023AF8EE300DDD135 /* LocationService.swift */; };
 		011BCEC423AFA7F500DDD135 /* AlertControllerLocationDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011BCEC323AFA7F500DDD135 /* AlertControllerLocationDenied.swift */; };
+		013942F223AFBBEF00A422AA /* MarkerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013942F123AFBBEF00A422AA /* MarkerService.swift */; };
+		013942F423AFBCE900A422AA /* MarkerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013942F323AFBCE900A422AA /* MarkerServiceProtocol.swift */; };
+		0160F4EC23AFC52A00623E73 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0160F4EB23AFC52A00623E73 /* UIImage.swift */; };
 		CCDAEFE944A5B6A8F957C964 /* Pods_Map.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D438B0516B069916AE719396 /* Pods_Map.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,9 @@
 		011BCEB623AF853500DDD135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		011BCEC023AF8EE300DDD135 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		011BCEC323AFA7F500DDD135 /* AlertControllerLocationDenied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerLocationDenied.swift; sourceTree = "<group>"; };
+		013942F123AFBBEF00A422AA /* MarkerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerService.swift; sourceTree = "<group>"; };
+		013942F323AFBCE900A422AA /* MarkerServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerServiceProtocol.swift; sourceTree = "<group>"; };
+		0160F4EB23AFC52A00623E73 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		2500606AED2C7A5F423B4E63 /* Pods-Map.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Map.release.xcconfig"; path = "Target Support Files/Pods-Map/Pods-Map.release.xcconfig"; sourceTree = "<group>"; };
 		52D39C8DC485ADFDD79A7358 /* Pods-Map.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Map.debug.xcconfig"; path = "Target Support Files/Pods-Map/Pods-Map.debug.xcconfig"; sourceTree = "<group>"; };
 		D438B0516B069916AE719396 /* Pods_Map.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Map.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +73,7 @@
 			children = (
 				011BCEA823AF853300DDD135 /* AppDelegate.swift */,
 				011BCEAA23AF853300DDD135 /* SceneDelegate.swift */,
+				0160F4EA23AFC51300623E73 /* Extesions */,
 				011BCEBC23AF85C700DDD135 /* Map */,
 				011BCEB123AF853500DDD135 /* Assets.xcassets */,
 				011BCEB323AF853500DDD135 /* LaunchScreen.storyboard */,
@@ -81,6 +88,7 @@
 				011BCEAC23AF853300DDD135 /* MapViewController.swift */,
 				011BCEC223AFA74800DDD135 /* AlertScenes */,
 				011BCEBF23AF89DA00DDD135 /* Services */,
+				013942F523AFBD2D00A422AA /* Protocols */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -89,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				011BCEC023AF8EE300DDD135 /* LocationService.swift */,
+				013942F123AFBBEF00A422AA /* MarkerService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -99,6 +108,22 @@
 				011BCEC323AFA7F500DDD135 /* AlertControllerLocationDenied.swift */,
 			);
 			path = AlertScenes;
+			sourceTree = "<group>";
+		};
+		013942F523AFBD2D00A422AA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				013942F323AFBCE900A422AA /* MarkerServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0160F4EA23AFC51300623E73 /* Extesions */ = {
+			isa = PBXGroup;
+			children = (
+				0160F4EB23AFC52A00623E73 /* UIImage.swift */,
+			);
+			path = Extesions;
 			sourceTree = "<group>";
 		};
 		A3138C86C522FE357DDB7297 /* Pods */ = {
@@ -233,8 +258,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				011BCEAD23AF853300DDD135 /* MapViewController.swift in Sources */,
+				0160F4EC23AFC52A00623E73 /* UIImage.swift in Sources */,
+				013942F223AFBBEF00A422AA /* MarkerService.swift in Sources */,
 				011BCEC123AF8EE300DDD135 /* LocationService.swift in Sources */,
 				011BCEC423AFA7F500DDD135 /* AlertControllerLocationDenied.swift in Sources */,
+				013942F423AFBCE900A422AA /* MarkerServiceProtocol.swift in Sources */,
 				011BCEA923AF853300DDD135 /* AppDelegate.swift in Sources */,
 				011BCEAB23AF853300DDD135 /* SceneDelegate.swift in Sources */,
 			);
