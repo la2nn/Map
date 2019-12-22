@@ -13,6 +13,8 @@
 		011BCEB223AF853500DDD135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 011BCEB123AF853500DDD135 /* Assets.xcassets */; };
 		011BCEB523AF853500DDD135 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011BCEB323AF853500DDD135 /* LaunchScreen.storyboard */; };
 		011BCEBE23AF89D400DDD135 /* MKCoordinateRegionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011BCEBD23AF89D400DDD135 /* MKCoordinateRegionService.swift */; };
+		011BCEC123AF8EE300DDD135 /* CLLocationManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011BCEC023AF8EE300DDD135 /* CLLocationManagerService.swift */; };
+		011BCEC423AFA7F500DDD135 /* AlertControllerLocationDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011BCEC323AFA7F500DDD135 /* AlertControllerLocationDenied.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		011BCEB423AF853500DDD135 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		011BCEB623AF853500DDD135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		011BCEBD23AF89D400DDD135 /* MKCoordinateRegionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegionService.swift; sourceTree = "<group>"; };
+		011BCEC023AF8EE300DDD135 /* CLLocationManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationManagerService.swift; sourceTree = "<group>"; };
+		011BCEC323AFA7F500DDD135 /* AlertControllerLocationDenied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerLocationDenied.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				011BCEAC23AF853300DDD135 /* MapViewController.swift */,
+				011BCEC223AFA74800DDD135 /* AlertScenes */,
 				011BCEBF23AF89DA00DDD135 /* Services */,
 			);
 			path = Map;
@@ -79,8 +84,17 @@
 			isa = PBXGroup;
 			children = (
 				011BCEBD23AF89D400DDD135 /* MKCoordinateRegionService.swift */,
+				011BCEC023AF8EE300DDD135 /* CLLocationManagerService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		011BCEC223AFA74800DDD135 /* AlertScenes */ = {
+			isa = PBXGroup;
+			children = (
+				011BCEC323AFA7F500DDD135 /* AlertControllerLocationDenied.swift */,
+			);
+			path = AlertScenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +168,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				011BCEAD23AF853300DDD135 /* MapViewController.swift in Sources */,
+				011BCEC123AF8EE300DDD135 /* CLLocationManagerService.swift in Sources */,
+				011BCEC423AFA7F500DDD135 /* AlertControllerLocationDenied.swift in Sources */,
 				011BCEA923AF853300DDD135 /* AppDelegate.swift in Sources */,
 				011BCEAB23AF853300DDD135 /* SceneDelegate.swift in Sources */,
 				011BCEBE23AF89D400DDD135 /* MKCoordinateRegionService.swift in Sources */,
