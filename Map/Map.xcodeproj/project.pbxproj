@@ -10,9 +10,9 @@
 		011BCEA923AF853300DDD135 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011BCEA823AF853300DDD135 /* AppDelegate.swift */; };
 		011BCEAB23AF853300DDD135 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011BCEAA23AF853300DDD135 /* SceneDelegate.swift */; };
 		011BCEAD23AF853300DDD135 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011BCEAC23AF853300DDD135 /* MapViewController.swift */; };
-		011BCEB023AF853300DDD135 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011BCEAE23AF853300DDD135 /* Main.storyboard */; };
 		011BCEB223AF853500DDD135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 011BCEB123AF853500DDD135 /* Assets.xcassets */; };
 		011BCEB523AF853500DDD135 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011BCEB323AF853500DDD135 /* LaunchScreen.storyboard */; };
+		011BCEBE23AF89D400DDD135 /* MKCoordinateRegionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011BCEBD23AF89D400DDD135 /* MKCoordinateRegionService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +20,10 @@
 		011BCEA823AF853300DDD135 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		011BCEAA23AF853300DDD135 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		011BCEAC23AF853300DDD135 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		011BCEAF23AF853300DDD135 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		011BCEB123AF853500DDD135 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		011BCEB423AF853500DDD135 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		011BCEB623AF853500DDD135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		011BCEBD23AF89D400DDD135 /* MKCoordinateRegionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegionService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,6 @@
 				011BCEA823AF853300DDD135 /* AppDelegate.swift */,
 				011BCEAA23AF853300DDD135 /* SceneDelegate.swift */,
 				011BCEBC23AF85C700DDD135 /* Map */,
-				011BCEAE23AF853300DDD135 /* Main.storyboard */,
 				011BCEB123AF853500DDD135 /* Assets.xcassets */,
 				011BCEB323AF853500DDD135 /* LaunchScreen.storyboard */,
 				011BCEB623AF853500DDD135 /* Info.plist */,
@@ -71,8 +70,17 @@
 			isa = PBXGroup;
 			children = (
 				011BCEAC23AF853300DDD135 /* MapViewController.swift */,
+				011BCEBF23AF89DA00DDD135 /* Services */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		011BCEBF23AF89DA00DDD135 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				011BCEBD23AF89D400DDD135 /* MKCoordinateRegionService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +143,6 @@
 			files = (
 				011BCEB523AF853500DDD135 /* LaunchScreen.storyboard in Resources */,
 				011BCEB223AF853500DDD135 /* Assets.xcassets in Resources */,
-				011BCEB023AF853300DDD135 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,20 +156,13 @@
 				011BCEAD23AF853300DDD135 /* MapViewController.swift in Sources */,
 				011BCEA923AF853300DDD135 /* AppDelegate.swift in Sources */,
 				011BCEAB23AF853300DDD135 /* SceneDelegate.swift in Sources */,
+				011BCEBE23AF89D400DDD135 /* MKCoordinateRegionService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		011BCEAE23AF853300DDD135 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				011BCEAF23AF853300DDD135 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		011BCEB323AF853500DDD135 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
